@@ -10,7 +10,7 @@ import sys;
 import getReq as ge;
 import time;
 import os;
-from sql import *;
+from mySQL import *;
 from post import *;
 
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) \
