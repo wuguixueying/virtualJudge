@@ -59,7 +59,7 @@ class hdu_Post(Post):
 
 	def get_code(self):
 
-		sql = SQL();
+		sql = sqll.SQL();
 		data = sql.select_code(self.local_runid);
 		
 		self.data  = {'problemid' : data[0],'language': data[1],'usercode':data[2]};
@@ -97,7 +97,7 @@ class hdu_Post(Post):
 		self.url_open(ce_url);
 		p = re.compile(r'<pre>[\d\D]*?</pre>');
 		p = p.search(self.page);
-		sql = SQL();
+		sql = sqll.SQL();
 		sql.insert_ce(p.group(0) , self.local_runid);
 
 	def get_result(self , runid):
