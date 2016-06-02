@@ -63,6 +63,8 @@ class Post(ge.GetReq):
 				self.write_sql(result);
 				return;
 		
+		result = ['判题失败' , '0' , '0'];
+		self.write_sql(reqult);
 		print('提交失败');
 
 	'''
