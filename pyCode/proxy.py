@@ -16,9 +16,9 @@ import sys;
 #proxy_url = 'http://cn-proxy.com/'
 # proxy_url = 'http://www.xicidaili.com/nn'
 # proxy_url = 'http://www.youdaili.net/Daili/http/4500.html'
-proxy_url = 'http://www.kuaidaili.com/free/?yundun=23cb539bb2cb03d9cdbf'
+proxy_url = 'http://www.xicidaili.com/nt/'
 user_agent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.110 Safari/537.36'
-headers = {'Host': 'www.kuaidaili.com', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8 ', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+headers = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8 ', 'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
 
 
 
@@ -79,18 +79,18 @@ def th_check(ip_list):
 	for i in th_list:
 		i.join();
 	sql = sqll.SQL()
-	while not jbout.empty():
-		sql.insert_ip(jbout.get());
-	# while not jbdel.empty():
-	# 	sql.del_ip(jbdel.get());
-	# 	print('del :')
+#	while not jbout.empty():
+#		sql.insert_ip(jbout.get());
+	while not jbdel.empty():
+	 	sql.del_ip(jbdel.get());
+	 	print('del :')
 
 if __name__ == "__main__":
 
 	sql = sqll.SQL();
-	html = url_open(proxy_url)
-	ip_list = find_ip(html)
-	#ip_list = sql.find_ip();
+#	html = url_open(proxy_url)
+#	ip_list = find_ip(html)
+	ip_list = sql.find_ip();
 	th_check(ip_list);
 	ip_list = sql.find_ip();
 	for i in ip_list:
