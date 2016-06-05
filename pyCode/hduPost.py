@@ -83,7 +83,7 @@ class hdu_Post(Post):
 		self.url_open(end_url);
 		p = re.compile(r'<td height=22px>([\d]+)<[\d\D]*?nyistvir%d</a></td>' % self.num);
 		p = p.search(self.page);
-		
+		print(p);
 		return int(p.group(1));
 	
 	def get_end_url(self):
