@@ -58,7 +58,7 @@ def ny_thread():
 
 def hdu_thread():
 	
-	proid = 1000;
+	proid = 5000;
 
 	jb = queue.Queue();
 	thlist = list();
