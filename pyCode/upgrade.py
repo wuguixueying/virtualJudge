@@ -85,4 +85,4 @@ def hdu_thread():
 
 if __name__ == "__main__":
 
-	hdu_thread();
+	ny_thread();
