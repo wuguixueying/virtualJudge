@@ -38,7 +38,7 @@ def ny_thread():
 	jb = queue.Queue();
 	thlist = list();
 	req = ny.GetReq_nyist();
-	for i in range(10):
+	for i in range(100):
 		t = th.Thread(target = run , args = (jb,req));
 		thlist.append(t);
 		t.setDaemon(True);
