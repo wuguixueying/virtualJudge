@@ -49,6 +49,7 @@ class GetReq_nyist(GetReq):     #这个是NYISTOJ爬虫的特定代码
 			self.title = p.group(1);
 		except Exception as err:
 			sys.stderr.write('这个是第%d题\n' % self.proid + str(err));
+			sys.stderr.write(self.page);
 			exit();
 
 	def get_page(self):			#把HTML页面里面初步
