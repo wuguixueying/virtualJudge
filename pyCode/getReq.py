@@ -51,6 +51,8 @@ class GetReq:
 				print(GetReq.proxies[chose])
 				req = requests.get(url = url , proxies = GetReq.proxies[chose] , headers = self.headers , timeout = 8);
 				self.page = req.text;
+				if req.status_code != 200:
+					continue;
 				return;
 
 			except Exception as er:
