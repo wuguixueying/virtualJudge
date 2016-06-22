@@ -4,15 +4,19 @@ import os;
 import multiprocessing as mu;
 import mySQL as sqll;
 
+"""
 def run(runid):
-	f = open('../fifo/runing' , 'w');
-	f.write(runid);
+	
 	print(runid);
+	f = open('../fifo/runing' , 'w');
+	print(runid);
+	f.write(runid);
 	f.close()
 
 if __name__ == '__main__':
 	sql = sqll.SQL();
 	a = sql.select_no_return();
+	print(a)
 	poll = mu.Pool(10);
 
 	for i in a:
@@ -21,5 +25,15 @@ if __name__ == '__main__':
 
 	poll.close();
 	poll.join();
-		
+"""
+
+if __name__ == "__main__":
+	sql = sqll.SQL();
+	a = sql.select_no_return();
+	for i in a:
+		runid = '%d\n' % i;
+		f = open('../fifo/runing' , 'w');
+		print(runid);
+		f.write(runid);
+		f.close()
 
