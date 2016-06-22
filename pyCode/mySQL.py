@@ -62,7 +62,7 @@ class SQL:
 
 
 	def select_no_return(self):							#给rejudge的查询所有判题中
-		select_sql = 'select runid from run where result is NULL';
+		select_sql = 'select runid from run where result LIKE \'判题失败\'';
 		self.connect();
 		run_list = list();
 		try:
