@@ -1,0 +1,48 @@
+#user_reg{
+  width:auto;
+  height:30em;
+  border:0.1em solid gray;
+  margin-top: 20px;
+  border-radius: 20px;
+  background:#eef3f8;
+}
+#reg_form span{
+color:red;
+}
+#reg_reset{
+background-color: #689ad5;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#reg_sub{
+background-color: #689ad5;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.error{
+	color: #ff3f13;
+	border: 1px solid #aff;
+	display: none;
+}
+#div_form{
+margin-left:250px;
+}
+p{
+margin:20px;
+}
+input{
+	padding:5px;
+}
+

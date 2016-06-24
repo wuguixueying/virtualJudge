@@ -1,0 +1,16 @@
+.problemset_nav{
+  height:1em;
+ /* overflow:auto;*/
+}
+.problemset_nav li{
+  list-style:none;
+  float:left;
+  width:5em;
+  height:1em;
+}
+#problemset_problemname{
+width:25em;
+}
+#problemset_problemname a{
+  text-decoration:none;
+}

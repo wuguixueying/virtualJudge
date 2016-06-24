@@ -1,0 +1,19 @@
+<?php
+require_once('head.php');
+require_once('left.php');
+require_once('middle_start.php');
+?>
+<div id="search_error">
+没有该题目的信息,3s后跳转回上一页面
+</div>
+<?php
+if(isset($_SERVER['HTTP_REFERER'])){
+$url=$_SERVER['HTTP_REFERER'];
+}
+else{
+$url="problemSet.php";
+}
+header("Refresh:3;$url");
+require_once('middle_end.php');
+require_once('footer.php');
+?>

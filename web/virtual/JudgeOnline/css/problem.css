@@ -1,0 +1,27 @@
+#problem_nav{
+  overflow:auto;
+  padding:0.8em 3em;
+}
+#problem_nav li{
+  list-style:none;
+  width:6em;
+  height:3em;
+  float:left;
+}
+#problem_nav li a{
+  text-decoration:none;
+}
+#code{
+ width:40em;
+ height:15em;
+ 
+}
+#title{
+ margin:0 6em;
+}
+#neck{
+ padding:0 8em;
+}
+#neck h4{
+display:inline;
+}

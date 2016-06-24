@@ -1,0 +1,45 @@
+#user_log{
+  width:auto;
+  height:30em;
+  border:0.1em solid gray;
+  padding:3em 15em;
+  background: #eef3f8;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+#log_reset{
+background-color: #689ad5;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#log_sub{
+    background-color: #689ad5;
+    border: 0;
+    font-size: 16px;
+    color: #fff;
+    font-weight: bold;
+    padding: 4px 12px;
+    display: inline-block;
+    border-radius: 4px;
+    cursor: pointer;
+}
+p{
+margin-left:100px;
+}
+.error_two{
+	color: #ff3f13;
+	border: 1px solid #aff;
+	display: none;
+}
+.error{
+	color: green;
+	border: 1px solid #aff;
+	display: none;
+}
+

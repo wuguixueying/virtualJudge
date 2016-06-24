@@ -1,0 +1,50 @@
+switch ($result){
+    case "WrongAnswer":
+      $sql="SELECT WA FROM hduResult";
+      break;
+    case "RuntimeError":
+      $sql="SELECT RE FROM hduResult";
+      break;
+    case "RuntimeErrorACCESS_VIOLATION":
+      $sql="SELECT RE_AV FROM hduResult";
+      break;
+    case "RuntimeErrorARRAY_BOUNDS_EXCEEDED":
+      $sql="SELECT RE_ABE FROM hduResult";
+      break;
+    case "RuntimeErrorFLOAT_DENORMAL_OPERAND":
+      $sql="SELECT RE_FDO FROM hduResult";
+       break;
+    case "RuntimeErrorFLOAT_DIVIDE_BY_ZERO":
+       $sql="SELECT RE_FDBZ FROM hduResult";
+       break;
+    case "RuntimeErrorFLOAT_OVERFLOW ":
+       $sql="SELECT RE_FO FROM hduResult";
+       break;
+    case "RuntimeErrorFLOAT_UNDERFLOW":
+       $sql="SELECT RE_FU FROM hduResult";
+       break;
+    case "RuntimeErrorINTEGER_DIVIDE_BY_ZERO":
+       $sql="SELECT RE_IDBZ FROM hduResult";
+       break;
+    case "RuntimeErrorINTEGER_OVERFLOW":
+       $sql="SELECT RE_IO FROM hduResult";
+       break;
+    case "RuntimeErrorSTACK_OVERFLOW":
+       $sql="SELECT RE_SO FROM hduResult";
+       break;
+    case "TimeLimitExceeded":
+       $sql="SELECT TLE FROM hduResult";
+       break;
+    case "MemoryLimitExceeded":
+      $sql="SELECT MLE FROM hduResult";
+      break;
+    case "OutputLimitExceeded":
+      $sql="SELECT OLE FROM hduResult";
+      break;
+    case "SystemError":
+      $sql="SELECT SE FROM hduResult";
+      break;
+    case "OutOfContestTime":
+      $sql="SELECT OOCT FROM hduResult";
+      break;
+  }

@@ -1,0 +1,56 @@
+#talk{
+	border: 1px solid black;
+	background: #3777bc;
+	color:#fff;
+	line-height: 50px;
+}
+#main{
+	height: auto;
+}
+#main h2{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+}
+#main h2 a {
+	height: 50px;
+	line-height: 50px;
+    color: #3777bc;       
+    text-decoration: none;
+    font-size: 24px;
+}
+#main h2 a:hover {
+    color: #e66100;
+    text-decoration: none;
+}
+.pcomment-box, .pcomment-box3 {
+    margin: 12px 0px;
+    border: 1px solid #D8DFEA;
+    background-color: #FDFDFD;
+}
+.pcomment-topic {
+    padding: 4px 0px 4px 10px;
+    background-color: #EDEDED;
+}
+.pcomment-body, .pcomment-body2 {
+    overflow: visible;
+    padding: 0px 0px 6px 2px;
+    float: left;
+    height: auto;
+    line-height: 1.5em;
+    min-height: 48px;
+    width: 555px;
+}
+.clear {
+    clear: both;
+}
+.core_reply_wrapper {
+	margin:0 auto;
+    margin-left: 0;
+    background: #ccc;
+    width: 880px;
+    margin: 10px 0 8px 30px;
+}
+.core_reply_wrapper ul li{
+	list-style: none;
+}

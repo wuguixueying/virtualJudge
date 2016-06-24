@@ -1,0 +1,109 @@
+*{
+ margin:0;
+ padding:0;
+font-family:'微软雅黑';
+}
+#nav{
+	width:100%;
+	height:100px;
+	/*******测试**********/
+    /*border:1px solid black;*/
+	/*******************/
+}
+#header{
+
+	/*******测试**********/
+    /*border:1px solid red;*/
+	/*******************/
+height:2.2em;
+list-style:none;
+background:#fff;
+padding:10px;
+margin:20px auto;
+float: left;
+margin-left: 200px;
+}
+#header li a:hover{
+	/*color:176;*/
+    /*color:255;*/
+   /*color:#808069;*/
+   /*color:#c0c0c0;*/
+   color:orange;
+}
+#header li,#log,#reg{
+	float:left;
+	margin-left:20px;
+}
+#header a,#log,#reg{
+text-align:center;
+line-height:2em;
+text-decoration:none;
+display:block;
+width:5em;
+height:2em;
+border:0.1em solid gray;
+background:#2E73D6;
+color:#fff;
+}
+#img1{
+	float: left;
+}
+#main{
+  width:100%;
+}
+#left,#right{
+ width:8em;
+ background:gray;
+}
+
+#middle{
+margin:0 12.5em;
+}
+
+.footer{ 
+	height:80px;
+margin-top: 5px;
+ background:url(../img/bg.png) repeat-x 0 0; 
+ color:#fff; 
+ font-size: 13px;
+ position: relative;
+ bottom: -100px;
+ clear: both;
+ top:150px;
+ }
+.footer .wrapper{ 
+	padding:.5em 0 0; 
+	color:#acacac; }
+.footer .wrapper a{ 
+	color:#fff; 
+	line-height:20px; 
+text-decoration: none;
+}
+.footer .wrapper a:hover{ 
+	text-decoration:underline; 
+}
+.footer .wrapper .us{ 
+	float:left; 
+}
+.footer .wrapper .flink{ 
+	float:left;
+	position: relative;
+	top: -20px; 
+} 
+.wrapper{ 
+	margin: 0 auto; 
+	width: 960px; 
+}
+.last{
+	position: relative;
+}
+#person,#log_out{
+text-decoration:none;
+}
+#log_reg{
+	display: inline;
+	float: left;
+}
+#log_reg p a:hover{
+	background:red;
+}
