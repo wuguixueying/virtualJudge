@@ -5,7 +5,6 @@
 ubuntu 14.04 apache 2.4 php 5.5 mysql 5.5 python 3.4 # 本机默认python还是2.7
 
 第三方模块:
-
 python connector mysql:
 
 wget http://cdn.mysql.com//Downloads/Connector-Python/mysql-connector-python-py3_2.1.3-1ubuntu14.04_all.deb
