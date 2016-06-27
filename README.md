@@ -22,6 +22,13 @@ sudo pip3 install requests
 
 其他版本去 http://docs.python-requests.org/zh_CN/latest/user/install.html 自行根据文档下载
 
+由于管道文件没找到方法上传至GIT，这里手动创建
+
+cd virtualJudge/
+mkdir fifo
+cd fifo
+sudo mkfifo runing
+chown www-data runing #ubuntu apache/nginx 的默认用户是www-data 让PHP可写
 
 
 
