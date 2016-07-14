@@ -70,7 +70,7 @@ class hdu_Post(Post):
 		sub_url = 'http://acm.hdu.edu.cn/submit.php?action=submit';
 		req = self.session.post(url = sub_url , data = self.data , headers = self.headers);
 		req.encoding = 'gbk';
-		print(req.text);
+#print(req.text);
 		p = re.compile(r'No such problem');
 		p = p.search(req.text);
 		if p == None:

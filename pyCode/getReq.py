@@ -28,7 +28,8 @@ class GetReq:
 		GetReq.get_proxies();
 		self.pro_url = '';								#基类里面就有他，子类一定要重新赋值
 
-	def get_proxies():									#加载代理模块
+	@classmethod
+	def get_proxies(cls):									#加载代理模块
 		try:
 			s = GetReq.proxies[0];						#如果这个变量不存在可能会抛出异常
 		except:											#还不太理解静态方法和类方法，先写个破玩意用这，留着以后理解了再改
