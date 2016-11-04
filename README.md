@@ -36,6 +36,7 @@ sudo mkfifo runing
 
 chown www-data runing #ubuntu apache/nginx 的默认用户是www-data 让PHP可写
 
+这里是dev分支
 
 
 
