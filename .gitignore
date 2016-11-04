@@ -139,3 +139,6 @@ solverd
 tags
 .vscode
 log*
+solverCodeBlocks
+tags
+.vscode
