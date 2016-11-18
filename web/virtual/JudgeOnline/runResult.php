@@ -4,10 +4,10 @@
  require_once('phpClass/mysql_php.php');
  require_once('phpClass/fenye_php.php');
   $mysql=new mysqlSupport;
-  $mysql->mysql_con(); //链接服务器
-  $mysql->mysql_con_db(); //链接数据库
-  $page=new PageSupport(25); //每个页面最大的记录数
-     if(isset($_GET['current_page'])) //获取到当前页面的值
+  $mysql->mysql_con(); 
+  $mysql->mysql_con_db(); 
+  $page=new PageSupport(25); 
+     if(isset($_GET['current_page']))
       {     $page->current_page=intval($_GET['current_page']);
      }else{ $page->current_page=1;}
 	   
@@ -59,9 +59,9 @@
 	   echo '<ul class="run_recode">';
 	      if(isset($_SESSION['userid'])){
 	     //用户登录时根据权限判断是否显示运行号超链接
-			  $user=$_SESSION['userid']; //当前登录的用户
-			  $poj=$res[$i]['oj']; //当前运行结果记录的oj
-			  $pid=$res[$i]['problemid'];//当前运行结果的题号
+			  $user=$_SESSION['userid']; 
+			  $poj=$res[$i]['oj'];
+			  $pid=$res[$i]['problemid'];
 		      $sql="SELECT * FROM run WHERE userid='$user' AND oj='$poj' AND problemid='$pid'";
 		      $user_res=mysql_query($sql);
 		      $user_arr=mysql_fetch_array($user_res);
@@ -123,7 +123,6 @@ Eof;
 				 <li class="run_result"><a id="{$i}" href="result_tip.php?runid={$res[$i]['runid']}">{$res[$i]['result']}</a></li>
 Eof;
 			}
-	        /********************显示时间****************/
 			if($res[$i]['time']==""){
 				   	echo <<<Eof
 				 <li class="run_time" id="{$i}time">--</li>
@@ -232,20 +231,20 @@ width:150px;
 </style>
 <script type="text/javascript">
           function refreshResult(j){
-		  var count=0;//记录setInterval函数调用的次数
+		  var count=0;
 	      var  resultVal=$('#'+j).html();
 		  if(resultVal=='判题中...'){ 
           var t=window.setInterval(function(){
 		//将返回结果通过jqury插入到标签中
 	    //记录中result的id统一为k,runid的id统一为k+runid,time的id统一为k+time
 		//memory的字段统一为k+memory,其中k是li标签在ul中出现的次序
-		  var  ri=$("#"+j+"runid").html();//取得运行号
-	      count+=1; //调用次数加1
+		  var  ri=$("#"+j+"runid").html();
+	      count+=1; 
 		if(count==120){ //如果经过一分钟还在刷新结果,则判为判题失败,并更新数据库的字段为“判题失败”
-		 $("#"+j).html("判题失败"); //给运行结果赋值
-		 $("#"+j+"time").html("--");//给时间赋值
-		 $("#"+j+"memory").html("--");//给内存赋值
-		 window.clearInterval(t); //移除定时器
+		 $("#"+j).html("判题失败"); 
+		 $("#"+j+"time").html("--");
+		 $("#"+j+"memory").html("--");
+		 window.clearInterval(t); 
 		 var URL="updateResult.php?runid="+ri;
 		 $.get(URL,function(ret){
 			 console.log(ret);
@@ -254,23 +253,23 @@ width:150px;
         var  url="returnResult.php?runid="+ri; 
 	    $.get(url,function(ret){
 		if(typeof ret!="object"){
-	    ret=JSON.parse(ret);//将json字符串转化成js对象
+	    ret=JSON.parse(ret);
 		}
 		console.log(ret[0]);
 		console.log(ret[1]);
 		console.log(ret[2]);
         if(ret[0]==null){ //返回结果为空,判题还没结果继续刷新
-		 return;  //结束函数		
+		 return;  		
 		}else if(ret[0]=="该题未公开"||ret[0]=="判题失败"){
-		 $("#"+j).html(ret[0]); //给运行结果赋值
-		 $("#"+j+"time").html("--");//给时间赋值
-		 $("#"+j+"memory").html("--");//给内存赋值
-		 window.clearInterval(t); //移除定时器 
+		 $("#"+j).html(ret[0]); 
+		 $("#"+j+"time").html("--");
+		 $("#"+j+"memory").html("--");
+		 window.clearInterval(t);  
 		}else{ //剩下的情况都是有结果的
-		 $("#"+j).html(ret[0]); //给运行结果赋值
-		 $("#"+j+"time").html(ret[1]);//给时间赋值
-		 $("#"+j+"memory").html(ret[2]);//给内存赋值
-		 window.clearInterval(t); //移除定时器	
+		 $("#"+j).html(ret[0]); 
+		 $("#"+j+"time").html(ret[1]);
+		 $("#"+j+"memory").html(ret[2]);
+		 window.clearInterval(t); 	
 		}
 		});		  		  
 				  },500); //如果判题结果未出来,每隔0.5s调用ajax方法刷新一次结果
